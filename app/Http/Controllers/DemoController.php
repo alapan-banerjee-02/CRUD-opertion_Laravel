@@ -109,4 +109,8 @@ class DemoController extends Controller
       DB::table('laravel_demo')->where('user_id',$id)->update($submitData);
       return redirect('/display');
      }
+
+     function just(){
+        echo "Hello Git";
+     }
 }
