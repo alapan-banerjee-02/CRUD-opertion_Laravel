@@ -17,6 +17,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 use App\Http\Controllers\DemoController;
+use App\Http\Controllers\Palincontroller;
 Route::get('/first',[DemoController::class,'first_example']);
 Route::get('/signup',[DemoController::class,'signup_form']);
 Route::post('/submit',[DemoController::class,'submit_data']);
@@ -28,3 +29,5 @@ Route::get('/signin',[DemoController::class,'login_form']);
 Route::post('/login',[DemoController::class,'login_data']);
 Route::get('/changepass',[DemoController::class,'change_pass']);
 Route::post('/updatepass',[DemoController::class,'update_pass']);
+
+Route::get('/fun',[Palincontroller::class,'arr_func']);
